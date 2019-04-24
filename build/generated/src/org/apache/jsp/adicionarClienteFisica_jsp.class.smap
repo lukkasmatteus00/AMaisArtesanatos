@@ -1,0 +1,19 @@
+SMAP
+adicionarClienteFisica_jsp.java
+JSP
+*S JSP
+*F
++ 0 adicionarClienteFisica.jsp
+adicionarClienteFisica.jsp
++ 1 menuAdmin.jspf
+menuAdmin.jspf
++ 2 validaCampos.jspf
+validaCampos.jspf
+*L
+1,22:51
+1#1,84:73
+22#0,2:157
+1#2,9:159
+38,163:168
+23#0,159:331
+*E

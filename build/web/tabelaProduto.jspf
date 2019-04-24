@@ -1,0 +1,80 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div class="container">
+    <h2 class="sub-header">Resultado da consulta</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Produto</th>
+                    <th>Tipo</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <jsp:useBean id="DAO" class="DAO.ProdutoDAO" />                
+                    <c:forEach var="produto" items="${DAO.ProdutoDAO.listar}" varStatus="id">
+                        <td>${produto.idProduto}</td>
+                        <td>${produto.nomeProduto}</td>
+                        <td>${produto.tipo}</td>
+                        <td>${produto.categotia}</td>
+                        <td>${produto.descricao}</td>
+                        <td>${produto.produto}</td>
+                        <%--<td>
+                            <a href="altera-pessoa.jsp?id=${pessoa.id }&nome=${pessoa.nome}&cpf=${pessoa.cpf}
+                               &dataNasc=${pessoa.dataNasc}&email=${pessoa.email}&login=${pessoa.login}
+                               &senha=${pessoa.senha}"><img src="imagens/edit.png" alt="editar"/></a>
+                        </td>--%>                        
+                    </tr>
+                    </c:forEach>
+                    
+                    <td>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" ></label>
+                            <div class="col-md-4">
+                                <button  class="btn btn-warning">Alterar</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="form-group">
+                            <label class="col-md-4 control-label"></label>
+                            <div class="col-md-4">
+                                <a href="deletaProduto?id=${produto.idProdut}"><button values="${produto.idProdut}" class="btn btn-danger">Excluir</button></a>
+                            </div>
+                        </div></td>
+                </tr>
+                <tr>
+                    <td>1,002</td>
+                    <td>amet</td>
+                    <td>consectetur</td>
+                    <td>adipiscing</td>
+                    <td>elit</td>
+
+                    <td>1,001</td>
+                    <td>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" ></label>
+                            <div class="col-md-4">
+                                <button  class="btn btn-warning">Alterar</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" ></label>
+                            <div class="col-md-4">
+                                <button  class="btn btn-danger">Excluir</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

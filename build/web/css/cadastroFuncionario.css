@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:300);
+@import url(http://fonts.googleapis.com/css?family=Zeyada);
+
+
+html, body {
+  height: 100%;
+}
+#contact  {
+  height: 100%;
+  padding: 20px;
+  margin-top: 25px;
+  background: url(http://www.zastavki.com/pictures/1920x1200/2010/Creative_Wallpaper_Black_wood_021744_.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+#contact h1 {
+  position: relative;
+  top: 30px;
+  font-size: 6em;
+  font-family: "Zeyada";
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+}
+
+#contact h2 {
+  position: relative;
+  top: -2px;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Zeyada";
+  text-transform: uppercase;
+  color: #000;
+}
+
+input{
+  height: 50px;
+  color: #000;
+}
+.form-control {
+  color: #000;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.4);
+  resize: none;
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  background: #34495e;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+}
+
+.btn-default:hover {
+  background: #2c3e50;
+  color: #fff;
+}
+
+
+
+@media (max-width: 768px) { 
+  #accueil h1, #contact h1 {
+    font-size: 4.6em;
+  }
+}

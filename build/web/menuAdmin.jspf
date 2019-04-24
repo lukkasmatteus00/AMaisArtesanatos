@@ -1,0 +1,84 @@
+<link href="css/fale.css" rel="stylesheet">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Controle do sistema</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="indexFuncionario.jsp">inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Juridica <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="adicionarClienteJuridica.jsp">Cadastrar</a></li>
+                                <li><a tabindex="-1" href="consultarJuridica.jsp">Consultar</a></li>
+                                <li><a tabindex="-1" href="alteraClienteJuridica.jsp">Alterar</a></li>
+                                <li><a tabindex="-1" href="#">Excluir</a></li>
+                            </ul>
+                            <a class="test" tabindex="-1" href="#">Fisica <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="adicionarClienteFisica.jsp">Cadastrar</a></li>
+                                <li><a tabindex="-1" href="consultarFisica.jsp">Consultar</a></li>
+                                <li><a tabindex="-1" href="alteraClienteFisica.jsp">Alterar</a></li>
+                                <li><a tabindex="-1" href="#">Excluir</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="adicionarProduto.jsp">Cadastrar</a></li>
+                        <li><a href="consultarProduto.jsp">Consultar</a></li>
+                        <li><a href="alterarProduto.jsp">Alterar</a></li>
+                        <li><a href="#">Excluir</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Funcionários<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="adicionarFuncionario.jsp">Cadastrar</a></li>
+                        <li><a href="consultarFuncionario.jsp">Consultar</a></li>
+                        <li><a href="alteraFuncionario.jsp">Alterar</a></li>
+                        <li><a href="#">Excluir</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Vendas</a></li>
+                <li><a href="mensagens.jsp">Mensagens</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">SAIR</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<style>
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.dropdown-submenu a.test').on("click", function (e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+</script>
